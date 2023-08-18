@@ -1,0 +1,74 @@
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.recipe-cat-heading {
+  margin-top: 5rem;
+}
+
+.saveButton {
+  cursor: pointer;
+  margin-top: 2.8rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border: 1px solid #bb874f;
+}
+
+.saveButton:hover {
+  background-color: #bb874f;
+  color: white;
+  top: -2px;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.cookingTime {
+  color: #bb874f;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+  font-family: "Grotesk", sans-serif;
+}
+
+.jamie {
+  color: #494760;
+  font-size: 0.875rem;
+  font-family: "SAA Series FD", sans-serif;
+  /* text-align: center;
+  padding-left: 4.7rem; */
+}
+
+blockquote {
+  color: #494760;
+  font-size: 0.875rem;
+  font-family: "SAA Series FD", sans-serif;
+  letter-spacing: 0.03rem;
+  margin-top: -2rem;
+  margin-bottom: 4.5rem;
+  padding-left: 6.5rem;
+}
+
+p {
+  white-space: pre;
+  color: #236b5e;
+  font-size: 16.75px;
+}
+
+.recipeInstructions {
+  font-family: "Nantes", serif;
+  font-size: 16.75px;
+}

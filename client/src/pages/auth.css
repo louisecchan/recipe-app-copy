@@ -1,0 +1,78 @@
+.auth {
+  display: flex;
+  width: 90vw;
+}
+
+.auth-title {
+  color: #fdbda2;
+  border-top: 1px solid #fdbda2;
+}
+
+.auth-container {
+  flex-wrap: wrap;
+  background-color: #c95152;
+}
+
+.button-holder {
+  text-align: center;
+}
+
+#username,
+#password {
+  border: 1px solid rgba(253, 189, 162, 0.5);
+  color: rgba(253, 189, 162, 0.5);
+  background: transparent;
+}
+
+#submit {
+  cursor: pointer;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  color: #fdbda2;
+  font-size: 15px©;
+  border-bottom: 1px solid #fdbda2;
+  padding-bottom: 5px;
+}
+
+#submit:hover {
+  color: #fcdccf;
+  border-bottom: 1px solid #fcdccf;
+}
+form {
+  width: 52%;
+}
+
+input {
+  margin-top: 8px;
+  height: 30px;
+  border-radius: 38px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  -ms-border-radius: 38px;
+  -o-border-radius: 38px;
+  -webkit-border-radius: 20px;
+}
+
+input::placeholder {
+  color: rgba(253, 189, 162, 0.5);
+}
+
+.arrow:before {
+  content: "→";
+  position: absolute;
+  color: #fdbda2;
+  left: 83%;
+  opacity: 0;
+  -webkit-transition: all 250ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.arrow:hover:before {
+  left: 84%;
+  opacity: 1;
+  color: #fcdccf;
+}
+
+.arrow:hover {
+  width: 140px;
+  color: #fcdccf;
+}

@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Object Sans";
+  src: local("Object Sans"),
+    url("./fonts/ObjectSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: local("Nantes"), url("./fonts/NantesWeb-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Grotesk";
+  src: url("./fonts/RightGrotesk-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SAA Series FD";
+  src: url("./fonts/SaaSeries-FA.woff") format("woff");
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  color: #bb874f;
+  font-size: 14px;
+  font-family: "Object Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #f2f2f2; */
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 380px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.navbar {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fdfdf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: #bb874f;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 15px;
+  font-family: "Object Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.create-recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 400px;
+}
+.create-recipe form {
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0px;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  color: #c48544;
+  font-family: "Nantes", serif;
+  margin-bottom: 5.5rem;
+}
+
+h2 {
+  color: #c48544;
+  font-family: "Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #bb874f;
+  padding-top: 1.2rem;
+}
+
+h3 {
+  color: #236b5e;
+  font-size: 35px;
+  font-family: "Nantes", serif;
+  margin-top: 3.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.125);
+}
+
+p {
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 400px;
+}

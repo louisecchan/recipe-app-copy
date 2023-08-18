@@ -1,0 +1,27 @@
+body {
+  align-items: center;
+  // justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.navbar-ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    padding-top: 2.7rem;
+  }
+
+  &:hover {
+    a {
+      color: RGB(237, 238, 218);
+      &:hover {
+        color: #bb874f;
+      }
+    }
+  }
+}
