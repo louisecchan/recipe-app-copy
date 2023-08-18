@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 import { useCookies } from "react-cookie";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]); // keep track of all the recipes existing in database
@@ -63,11 +64,16 @@ export const Home = () => {
       <h1 className="recipe-cat-heading">Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
-          <li key={recipe._id}>
+          <motion.li
+            initial={{ opacity: 0.3 }}
+            whileInView={{ opacity: 1 }}
+            key={recipe._id}
+          >
             <div>
               <h2 className="recipe-title">{recipe.name}</h2>
             </div>
             <img src={recipe.imageUrl} alt={recipe.name} />
+
             <div className="instructions">
               <p className="cookingTime">
                 Cooking Time: {recipe.cookingTime} minutes
@@ -85,7 +91,7 @@ export const Home = () => {
             >
               {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
             </button>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>
