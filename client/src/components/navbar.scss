@@ -1,13 +1,10 @@
-@media screen and (max-width: 768px) {
-}
-
 @media screen and (max-width: 420px) {
   #site-logo {
     display: block;
   }
 
   .hamburger {
-    color: #bb874f;
+    color: #bb874f !important;
     margin-top: -0.7rem;
     margin-left: 18.5rem;
   }
