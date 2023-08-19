@@ -1,9 +1,17 @@
 import "./navbar.scss";
-import React from "react";
+import Hamburger from "hamburger-react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 
 export const Navbar = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
+  const closeMobileMenu = () => setIsNavExpanded(false);
+
+  // hamburger
+  const [isOpen, setOpen] = useState(false);
+
   const [cookies, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
 
@@ -12,32 +20,57 @@ export const Navbar = () => {
     window.localStorage.clear();
     navigate("/auth");
   };
+
   return (
     <div className="navbar">
-      <ul className="navbar-ul">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/create-recipe">Create a Recipe</Link>
-        </li>
+      <img
+        id="siteLogo"
+        src={require("../images/siteLogo.png")}
+        alt="Site Logo"
+      />
 
-        {!cookies.access_token ? (
+      <div
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}
+      >
+        {" "}
+        <div className="hamburger">
+          {/* ^ on click?  */}
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+        </div>
+      </div>
+
+      <div
+        className={
+          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+        }
+      >
+        <ul className="navbar-ul">
           <li>
-            <Link to="/auth">Login/Register</Link>
+            <Link to="/">Home</Link>
           </li>
-        ) : (
-          // fragments: so can use element without a parent
-          <>
+          <li>
+            <Link to="/create-recipe">Create a Recipe</Link>
+          </li>
+
+          {!cookies.access_token ? (
             <li>
-              <Link to="/saved-recipes">Saved Recipes</Link>
+              <Link to="/auth">Login/Register</Link>
             </li>
-            <li>
-              <button onClick={logout}> Logout </button>
-            </li>
-          </>
-        )}
-      </ul>
+          ) : (
+            // fragments: so can use element without a parent
+            <>
+              <li>
+                <Link to="/saved-recipes">Saved Recipes</Link>
+              </li>
+              <li>
+                <button onClick={logout}> Logout </button>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };
