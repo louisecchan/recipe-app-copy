@@ -1,3 +1,9 @@
+@media screen and (max-width: 768px) {
+  .recipe-container {
+    width: 80vw !important;
+  }
+}
+
 @media screen and (max-width: 420px) {
   #method {
     font-size: 1rem !important;
@@ -31,11 +37,6 @@
   .recipe-ingredients {
     font-size: 1rem !important;
   }
-
-  /* p {
-    display: flex;
-    flex-wrap: wrap !important;
-  } */
 }
 
 .recipe-cat-heading {

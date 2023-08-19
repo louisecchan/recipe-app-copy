@@ -36,7 +36,6 @@ export const Navbar = () => {
       >
         {" "}
         <div className="hamburger">
-          {/* ^ on click?  */}
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>

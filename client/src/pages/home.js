@@ -1,5 +1,5 @@
 import "./home.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
 import { useCookies } from "react-cookie";
@@ -67,6 +67,7 @@ export const Home = () => {
           <motion.li
             initial={{ opacity: 0.3 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             key={recipe._id}
           >
             <div>

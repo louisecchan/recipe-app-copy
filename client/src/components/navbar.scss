@@ -1,3 +1,6 @@
+@media screen and (max-width: 768px) {
+}
+
 @media screen and (max-width: 420px) {
   #site-logo {
     display: block;
@@ -64,6 +67,10 @@ a {
   transition: 0.25s ease;
 }
 
+.hamburger {
+  color: transparent;
+}
+
 .nav-btn {
   display: none;
 }
@@ -83,6 +90,7 @@ a {
 .navbar-ul {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -2.6rem;
 
   li {
     padding-top: 2.7rem;
