@@ -38,37 +38,16 @@
     margin-top: 3rem !important;
     margin-left: -3.2rem !important;
   }
+
   .navigation-menu li a {
     width: 100%;
     margin-left: 3.7rem;
     font-size: 2rem !important;
   }
+
   .navigation-menu.expanded ul {
     display: block;
     height: 100vh;
-  }
-
-  .recipe-container {
-    width: 80vw !important;
-  }
-
-  .recipe-cat-heading {
-    margin-top: 2.8rem !important;
-    margin-bottom: 3.8rem !important;
-  }
-
-  .recipe-title {
-    font-size: 1.8rem !important;
-  }
-
-  .recipe-instructions {
-    overflow: hidden;
-    font-size: 1rem !important;
-  }
-
-  p {
-    display: flex;
-    flex-wrap: wrap !important;
   }
 }
 
@@ -78,7 +57,6 @@
 
 body {
   align-items: center;
-  // justify-content: center;
 }
 
 a {

@@ -83,7 +83,9 @@ export const Home = () => {
               <p className="recipe-instructions">{recipe.ingredients}</p>
               <h3>Method</h3>
 
-              <p className="recipe-instructions">{recipe.instructions}</p>
+              <p className="recipe-instructions" id="method">
+                {recipe.instructions}
+              </p>
             </div>
 
             <button

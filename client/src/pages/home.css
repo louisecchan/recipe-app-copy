@@ -1,3 +1,39 @@
+@media screen and (max-width: 420px) {
+  #method {
+    font-size: 1rem !important;
+  }
+
+  .cookingTime {
+    font-size: 1.1rem !important;
+  }
+
+  .recipe-container {
+    width: 80vw !important;
+  }
+
+  .recipe-cat-heading {
+    font-size: 3.2rem !important;
+    margin-top: 2.8rem !important;
+    margin-bottom: 4.2rem !important;
+  }
+
+  .recipe-title {
+    font-size: 1.8rem !important;
+    margin-bottom: -0.5rem !important;
+    letter-spacing: -0.0005rem !important;
+  }
+
+  .recipe-instructions {
+    overflow: hidden;
+    font-size: 1rem !important;
+  }
+
+  p {
+    display: flex;
+    flex-wrap: wrap !important;
+  }
+}
+
 .recipe-cat-heading {
   margin-top: 5rem;
 }
