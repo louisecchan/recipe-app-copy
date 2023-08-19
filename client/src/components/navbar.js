@@ -24,7 +24,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <img
-        id="siteLogo"
+        id="site-logo"
         src={require("../images/siteLogo.png")}
         alt="Site Logo"
       />

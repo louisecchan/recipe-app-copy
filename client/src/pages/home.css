@@ -39,6 +39,11 @@
   padding-left: 4.7rem; */
 }
 
+.recipe-instructions {
+  font-family: "Nantes", serif;
+  font-size: 16.75px;
+}
+
 blockquote {
   color: #494760;
   font-size: 0.875rem;
@@ -52,10 +57,5 @@ blockquote {
 p {
   white-space: pre;
   color: #236b5e;
-  font-size: 16.75px;
-}
-
-.recipeInstructions {
-  font-family: "Nantes", serif;
   font-size: 16.75px;
 }

@@ -1,5 +1,5 @@
 @media screen and (max-width: 420px) {
-  #siteLogo {
+  #site-logo {
     display: block;
   }
 
@@ -48,17 +48,31 @@
     height: 100vh;
   }
 
-  .recipeContainer {
+  .recipe-container {
     width: 80vw !important;
   }
 
-  .recipeInstructions {
+  .recipe-cat-heading {
+    margin-top: 2.8rem !important;
+    margin-bottom: 3.8rem !important;
+  }
+
+  .recipe-title {
+    font-size: 1.8rem !important;
+  }
+
+  .recipe-instructions {
+    overflow: hidden;
+    font-size: 1rem !important;
+  }
+
+  p {
     display: flex;
     flex-wrap: wrap !important;
   }
 }
 
-#siteLogo {
+#site-logo {
   display: none;
 }
 
