@@ -72,7 +72,12 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <button onClick={logout}> Logout </button>
+                <Link onClick={closeMobileMenu}>
+                  <button onClick={logout} className="logout-btn">
+                    {" "}
+                    Logout{" "}
+                  </button>
+                </Link>
               </li>
             </>
           )}
