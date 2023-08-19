@@ -1,3 +1,17 @@
+@media screen and (max-width: 420px) {
+  .auth-container-1 {
+    margin-bottom: 2rem !important;
+  }
+
+  input::placeholder {
+    font-size: 1.1rem !important;
+  }
+
+  #submit {
+    font-size: 1.1rem !important;
+  }
+}
+
 .auth {
   background-color: #c95152;
   position: relative !important;
