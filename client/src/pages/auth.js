@@ -46,11 +46,10 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container-1">
       <form onSubmit={handleSubmit}>
         <h2 className="auth-title">Login</h2>
         <div className="form-group">
-          {/* <label htmlFor="username">Username:</label> */}
           <input
             type="text"
             id="username"
@@ -60,7 +59,6 @@ const Login = () => {
           />
         </div>
         <div className="form-group">
-          {/* <label htmlFor="password">Password:</label> */}
           <input
             type="password"
             id="password"
@@ -103,7 +101,7 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container-2">
       <form onSubmit={handleSubmit}>
         <h2 className="auth-title">Register</h2>
         <div className="form-group">
