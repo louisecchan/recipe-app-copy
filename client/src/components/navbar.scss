@@ -4,6 +4,7 @@
   }
 
   .hamburger {
+    display: block !important;
     color: #bb874f !important;
     margin-top: -0.7rem;
     margin-left: 18.5rem;
@@ -65,7 +66,11 @@ a {
 }
 
 .hamburger {
-  color: transparent;
+  display: none;
+  // color: transparent;
+  // position: absolute;
+  // left: 10%;
+  // top: 2%;
 }
 
 .nav-btn {
