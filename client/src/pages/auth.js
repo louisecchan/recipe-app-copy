@@ -46,7 +46,7 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container-1">
+    <div className="auth-container-1 slide-up-fade-in">
       <form onSubmit={handleSubmit}>
         <h2 className="auth-title">Login</h2>
         <div className="form-group">
@@ -101,7 +101,7 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-container-2">
+    <div className="auth-container-2 slide-up-fade-in-delayed">
       <form onSubmit={handleSubmit}>
         <h2 className="auth-title">Register</h2>
         <div className="form-group">
