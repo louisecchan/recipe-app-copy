@@ -5,7 +5,8 @@
 
   .hamburger {
     color: #bb874f;
-    margin-top: -0.5rem;
+    margin-top: -0.7rem;
+    margin-left: 18.5rem;
   }
 
   .nav-btn {
@@ -34,17 +35,17 @@
     text-align: center;
     position: relative;
     top: 7%;
-    margin: 0.5rem !important;
+    margin-top: 3.5rem !important;
     margin-left: -3.2rem !important;
   }
   .navigation-menu li a {
-    width: 90%;
-    margin-top: -1.5rem;
-    margin-left: -5.4rem;
-    font-size: 0.95rem !important;
+    width: 100%;
+    margin-left: 3.7rem;
+    font-size: 2rem !important;
   }
   .navigation-menu.expanded ul {
     display: block;
+    height: 100vh;
   }
 }
 

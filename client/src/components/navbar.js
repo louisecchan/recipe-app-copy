@@ -51,18 +51,24 @@ export const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/create-recipe">Create a Recipe</Link>
+            <Link to="/create-recipe" onClick={closeMobileMenu}>
+              Create a Recipe
+            </Link>
           </li>
 
           {!cookies.access_token ? (
             <li>
-              <Link to="/auth">Login/Register</Link>
+              <Link to="/auth" onClick={closeMobileMenu}>
+                Login/Register
+              </Link>
             </li>
           ) : (
             // fragments: so can use element without a parent
             <>
               <li>
-                <Link to="/saved-recipes">Saved Recipes</Link>
+                <Link to="/saved-recipes" onClick={closeMobileMenu}>
+                  Saved Recipes
+                </Link>
               </li>
               <li>
                 <button onClick={logout}> Logout </button>
