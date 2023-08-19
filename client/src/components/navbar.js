@@ -48,7 +48,9 @@ export const Navbar = () => {
       >
         <ul className="navbar-ul">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeMobileMenu}>
+              Home
+            </Link>
           </li>
           <li>
             <Link to="/create-recipe" onClick={closeMobileMenu}>

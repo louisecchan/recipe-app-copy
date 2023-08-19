@@ -60,7 +60,7 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
+    <div className="recipeContainer">
       <h1 className="recipe-cat-heading">Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
@@ -79,9 +79,12 @@ export const Home = () => {
                 Cooking Time: {recipe.cookingTime} minutes
               </p>
               <h3>Ingredients</h3>
+
               <p className="recipeInstructions">{recipe.ingredients}</p>
               <h3>Method</h3>
-              <p className="recipeInstructions">{recipe.instructions}</p>
+              <div className="methodContainer">
+                <p className="recipeInstructions">{recipe.instructions}</p>
+              </div>
             </div>
 
             <button
