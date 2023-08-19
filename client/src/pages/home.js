@@ -80,7 +80,7 @@ export const Home = () => {
               </p>
               <h3>Ingredients</h3>
 
-              <p className="recipe-instructions">{recipe.ingredients}</p>
+              <p className="recipe-ingredients">{recipe.ingredients}</p>
               <h3>Method</h3>
 
               <p className="recipe-instructions" id="method">

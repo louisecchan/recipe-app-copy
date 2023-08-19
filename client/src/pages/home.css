@@ -24,14 +24,18 @@
   }
 
   .recipe-instructions {
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 1rem !important;
   }
 
-  p {
+  .recipe-ingredients {
+    font-size: 1rem !important;
+  }
+
+  /* p {
     display: flex;
     flex-wrap: wrap !important;
-  }
+  } */
 }
 
 .recipe-cat-heading {
@@ -75,7 +79,8 @@
   padding-left: 4.7rem; */
 }
 
-.recipe-instructions {
+.recipe-instructions,
+.recipe-ingredients {
   font-family: "Nantes", serif;
   font-size: 16.75px;
 }
