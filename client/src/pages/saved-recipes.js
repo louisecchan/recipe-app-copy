@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
 import axios from "axios";
+import "./saved-recipes.css";
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
@@ -22,7 +23,7 @@ export const SavedRecipes = () => {
   }, []);
   return (
     <div>
-      <h1>Saved Recipes</h1>
+      <h1 className="saved-recipes-heading">Saved Recipes</h1>
       <ul>
         {savedRecipes.map((recipe) => (
           <li key={recipe._id}>

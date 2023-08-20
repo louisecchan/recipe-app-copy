@@ -1,0 +1,11 @@
+@media screen and (max-width: 420px) {
+  .saved-recipes-heading {
+    font-size: 3.2rem !important;
+    margin-top: 2.8rem !important;
+    margin-bottom: 4.2rem !important;
+  }
+}
+
+.saved-recipes-heading {
+  margin-top: 5rem;
+}
