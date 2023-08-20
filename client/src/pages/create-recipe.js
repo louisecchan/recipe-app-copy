@@ -1,4 +1,7 @@
 import "./create-recipe.scss";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
 import React, { useState } from "react";
 import axios from "axios";
 import { useGetUserID } from "../hooks/useGetUserID";
@@ -55,6 +58,8 @@ export const CreateRecipe = () => {
       console.error(error);
     }
   };
+
+  Splitting();
 
   return (
     <div className="create-recipe slide-up-fade-in">
@@ -116,9 +121,15 @@ export const CreateRecipe = () => {
           value={recipe.cookingTime}
           onChange={handleChange}
         />
-        <button type="submit" className="cr2-button fill">
-          Abracadabra!
-        </button>
+        <div className="nav__link">
+          <button
+            type="submit"
+            className="cr2-button fill nav__link--text"
+            data-splitting
+          >
+            Abracadabra!
+          </button>
+        </div>
       </form>
     </div>
   );
