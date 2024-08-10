@@ -2,8 +2,9 @@
   label {
     font-size: 1.15rem !important;
   }
+
   h2 {
-    font-style: 1.28rem !important;
+    font-size: 1.28rem !important;
   }
 }
 :root {
@@ -95,7 +96,7 @@ label {
   color: #236b5e;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-family: "Nantes", serif;
+  font-family: "Grotesk", sans-serif;
   font-size: 15px;
 }
 
