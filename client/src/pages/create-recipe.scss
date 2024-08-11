@@ -74,16 +74,15 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: 0.08s ease-in;
-  -o-transition: 0.08s ease-in;
-  -ms-transition: 0.08s ease-in;
-  -moz-transition: 0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
+  transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  -ms-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -webkit-transition: 0.5s ease-in;
 }
 
 label {
   padding-top: 1.7rem;
-  //padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
   color: #236b5e;
   letter-spacing: 0.1rem;
@@ -164,8 +163,7 @@ textarea:focus {
 
 .cr1-button,
 .cr2-button {
-  //margin-bottom: 1rem;
-  padding-top: 1.05rem;
+  padding-top: 1.2rem;
   padding-bottom: 1.05rem;
   background-color: #bb874f;
   color: #fff;
