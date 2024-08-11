@@ -82,14 +82,14 @@ form {
 }
 
 input {
-  margin-top: 8px;
+  /*margin-top: 8px;*/
   height: 30px;
   border-radius: 38px;
   -webkit-border-radius: 38px;
   -moz-border-radius: 38px;
   -ms-border-radius: 38px;
   -o-border-radius: 38px;
-  -webkit-border-radius: 20px;
+  -webkit-border-radius: 10px;
 }
 
 input::placeholder {

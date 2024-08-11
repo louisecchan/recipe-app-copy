@@ -4,7 +4,7 @@
   }
 
   h2 {
-    font-style: 1.28rem !important;
+    font-size: 1.28rem !important;
   }
 }
 
@@ -83,13 +83,24 @@ button {
 
 label {
   padding-top: 1.7rem;
-  padding-bottom: 0.6rem;
+  //padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
   color: #236b5e;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-family: "Nantes", serif;
   font-size: 15px;
+}
+
+input {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+input#ingredients {
+  margin-bottom: 1rem;
 }
 
 input,
@@ -101,11 +112,11 @@ textarea {
 textarea {
   resize: none;
   height: 44px;
-  border-radius: 18px;
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
-  -ms-border-radius: 18px;
-  -o-border-radius: 18px;
+  border-radius: 10px;
+  //-webkit-border-radius: 18px;
+  //-moz-border-radius: 18px;
+  //-ms-border-radius: 18px;
+  //-o-border-radius: 18px;
 }
 
 input:hover,
@@ -138,7 +149,7 @@ textarea:focus {
 }
 
 .cr1-button {
-  margin-top: 1rem;
+  margin-top: 0.1rem;
 }
 
 .cr1-button:hover,
@@ -153,16 +164,16 @@ textarea:focus {
 
 .cr1-button,
 .cr2-button {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
   padding-top: 1.05rem;
   padding-bottom: 1.05rem;
   background-color: #bb874f;
   color: #fff;
-  border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -o-border-radius: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .fill:hover {
