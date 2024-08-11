@@ -252,6 +252,7 @@ textarea:focus {
     opacity: 0;
     transform: translate(0px, 40px);
   }
+
   100% {
     opacity: 1;
     transform: translate(0px, 0px);
@@ -263,6 +264,7 @@ textarea:focus {
     opacity: 0;
     -moz-transform: translate(0px, 40px);
   }
+
   100% {
     opacity: 1;
     -moz-transform: translate(0px, 0px);
@@ -274,6 +276,7 @@ textarea:focus {
     opacity: 0;
     -webkit-transform: translate(0px, 40px);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translate(0px, 0px);
@@ -285,6 +288,7 @@ textarea:focus {
     opacity: 0;
     -o-transform: translate(0px, 40px);
   }
+
   100% {
     opacity: 1;
     -o-transform: translate(0px, 0px);
@@ -296,8 +300,25 @@ textarea:focus {
     opacity: 0;
     -ms-transform: translate(0px, 40px);
   }
+
   100% {
     opacity: 1;
     -ms-transform: translate(0px, 0px);
   }
+}
+
+@keyframes popAndJiggle {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-jiggle {
+  animation: popAndJiggle 0.5s ease;
 }

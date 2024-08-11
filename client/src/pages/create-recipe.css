@@ -298,5 +298,19 @@ textarea:focus {
     -ms-transform: translate(0px, 0px);
   }
 }
+@keyframes popAndJiggle {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pop-jiggle {
+  animation: popAndJiggle 0.5s ease;
+}
 
 /*# sourceMappingURL=create-recipe.css.map */
