@@ -43,6 +43,7 @@ export const CreateRecipe = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // prevent page refreshing every time I hit submit button
+
     try {
       await axios.post(
         "https://abandoned-ship-production.up.railway.app/recipes",
