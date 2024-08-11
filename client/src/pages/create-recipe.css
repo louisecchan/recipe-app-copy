@@ -2,7 +2,6 @@
   label {
     font-size: 1.15rem !important;
   }
-
   h2 {
     font-size: 1.28rem !important;
   }
@@ -91,13 +90,23 @@ button {
 
 label {
   padding-top: 1.7rem;
-  padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
   color: #236b5e;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-family: "Grotesk", sans-serif;
+  font-family: "Nantes", serif;
   font-size: 15px;
+}
+
+input {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+input#ingredients {
+  margin-bottom: 1rem;
 }
 
 input,
@@ -109,11 +118,7 @@ textarea {
 textarea {
   resize: none;
   height: 44px;
-  border-radius: 18px;
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
-  -ms-border-radius: 18px;
-  -o-border-radius: 18px;
+  border-radius: 10px;
 }
 
 input:hover,
@@ -146,7 +151,7 @@ textarea:focus {
 }
 
 .cr1-button {
-  margin-top: 1rem;
+  margin-top: 0.1rem;
 }
 
 .cr1-button:hover,
@@ -161,16 +166,15 @@ textarea:focus {
 
 .cr1-button,
 .cr2-button {
-  margin-bottom: 1rem;
   padding-top: 1.05rem;
   padding-bottom: 1.05rem;
   background-color: #bb874f;
   color: #fff;
-  border-radius: 14px;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  -ms-border-radius: 14px;
-  -o-border-radius: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .fill:hover {
@@ -253,4 +257,46 @@ textarea:focus {
     opacity: 1;
     transform: translate(0px, 0px);
   }
-}/*# sourceMappingURL=create-recipe.css.map */
+}
+@-moz-keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+  }
+}
+@-o-keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    -o-transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translate(0px, 0px);
+  }
+}
+@-ms-keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    -ms-transform: translate(0px, 40px);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translate(0px, 0px);
+  }
+}
+
+/*# sourceMappingURL=create-recipe.css.map */
