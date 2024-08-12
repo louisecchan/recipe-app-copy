@@ -55,6 +55,10 @@
   background: transparent;
 }
 
+#username:focus {
+  color: #fcf1f0;
+}
+
 #submit {
   cursor: pointer;
   margin-top: 35px;
