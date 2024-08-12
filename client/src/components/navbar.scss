@@ -8,11 +8,17 @@
     color: #bb874f !important;
     margin-top: -0.7rem;
     margin-left: 18.5rem;
+
+    .hamburger-react {
+      margin-left: 5px;
+      margin-top: 10px;
+    }
   }
 
   .navbar-ul {
     margin-left: 0rem !important;
   }
+
   .nav-btn {
     display: inline-block;
     position: absolute;
