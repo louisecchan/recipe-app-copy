@@ -55,12 +55,17 @@
   background: transparent;
 }
 
+#username:focus,
+#password:focus {
+  color: #fdbda2;
+}
+
 #submit {
   cursor: pointer;
   margin-top: 35px;
   margin-bottom: 25px;
   color: #fdbda2;
-  font-size: 15px©;
+  font-size: 15px;
   border-bottom: 1px solid #fdbda2;
   padding-bottom: 5px;
   z-index: 0;

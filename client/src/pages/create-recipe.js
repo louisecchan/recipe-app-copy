@@ -17,6 +17,7 @@ export const CreateRecipe = () => {
     cookingTime: 0,
     userOwner: userID,
   });
+  const [newIngredientIndex, setNewIngredientIndex] = useState(null); // New state to track the index of the newly added ingredient
 
   const navigate = useNavigate();
 
@@ -36,10 +37,13 @@ export const CreateRecipe = () => {
     const ingredients = [...recipe.ingredients, ""];
     setRecipe({ ...recipe, ingredients });
     // setting the recipe object to be the same as before, whatever came after the comma will have changes, i.e. change to the ingredients field
+    setNewIngredientIndex(ingredients.length - 1); // Set the index of the new ingredient to apply animation
+    setTimeout(() => setNewIngredientIndex(null), 500); // Clear the animation class after 500ms
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // prevent page refreshing every time I hit submit button
+
     try {
       await axios.post(
         "https://abandoned-ship-production.up.railway.app/recipes",
@@ -84,6 +88,7 @@ export const CreateRecipe = () => {
             name="ingredients"
             value={ingredient}
             onChange={(event) => handleIngredientChange(event, index)}
+            className={newIngredientIndex === index ? "pop-jiggle" : ""} // Apply animation class if the index matches
           />
         ))}
         <button

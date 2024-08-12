@@ -14,59 +14,6 @@
   display: grid;
 }
 
-.nav__link--text {
-  grid-area: 1/1;
-  transition: opacity 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-.nav__link--text .word {
-  white-space: nowrap;
-}
-
-.nav__link--text .char {
-  display: inline-block;
-  transform-origin: 50% 50% 0.4em;
-  transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
-  transition-delay: calc(0ms + var(--char-index) * 25ms);
-  backface-visibility: hidden;
-  margin: 0 -0.02em;
-}
-
-.nav__link--text:nth-child(1) {
-  font-family: "Object Sans";
-  font-weight: 500;
-}
-
-.nav__link--text:nth-child(2) {
-  font-family: "Nantes";
-  font-weight: 500;
-  opacity: 0;
-}
-
-.nav__link--text:nth-child(2) .char {
-  transform: rotate3d(1, -0.5, 0, 90deg);
-}
-
-.nav__link:hover .nav__link--text {
-  transform: translateX(var(--link-translate-x));
-}
-
-.nav__link:hover .nav__link--text:nth-child(1) {
-  opacity: 0;
-}
-
-.nav__link:hover .nav__link--text:nth-child(1) .char {
-  transform: rotate3d(1, 0.3, 0, -90deg);
-}
-
-.nav__link:hover .nav__link--text:nth-child(2) {
-  opacity: 1;
-}
-
-.nav__link:hover .nav__link--text:nth-child(2) .char {
-  transform: rotate3d(0, 0, 0, 90deg);
-}
-
 #name,
 #description,
 #instructions,
@@ -81,11 +28,11 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: 0.08s ease-in;
-  -o-transition: 0.08s ease-in;
-  -ms-transition: 0.08s ease-in;
-  -moz-transition: 0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
+  transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  -ms-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -webkit-transition: 0.5s ease-in;
 }
 
 label {
@@ -117,8 +64,13 @@ textarea {
 
 textarea {
   resize: none;
-  height: 44px;
+  height: 24px;
   border-radius: 10px;
+  padding: 15px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 input:hover,
@@ -162,11 +114,36 @@ textarea:focus {
 
 .cr2-button {
   margin-top: 2.5rem;
+  visibility: visible;
+  transition: transform 0.1s ease-in-out;
+}
+.cr2-button:active {
+  animation: vibrate 0.7s;
 }
 
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 .cr1-button,
 .cr2-button {
-  padding-top: 1.05rem;
+  padding-top: 1.2rem;
   padding-bottom: 1.05rem;
   background-color: #bb874f;
   color: #fff;
@@ -297,6 +274,20 @@ textarea:focus {
     opacity: 1;
     -ms-transform: translate(0px, 0px);
   }
+}
+@keyframes popAndJiggle {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pop-jiggle {
+  animation: popAndJiggle 0.5s ease;
 }
 
 /*# sourceMappingURL=create-recipe.css.map */
