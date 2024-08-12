@@ -120,12 +120,13 @@ textarea {
 
 textarea {
   resize: none;
-  height: 44px;
+  height: 24px;
   border-radius: 10px;
-  //-webkit-border-radius: 18px;
-  //-moz-border-radius: 18px;
-  //-ms-border-radius: 18px;
-  //-o-border-radius: 18px;
+  padding: 15px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 input:hover,
