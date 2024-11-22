@@ -30,7 +30,6 @@
   }
 
   .recipe-instructions {
-    /* overflow: hidden; */
     font-size: 1rem !important;
   }
 
@@ -84,6 +83,7 @@
 .recipe-ingredients {
   font-family: "Nantes", serif;
   font-size: 16.75px;
+  text-wrap: wrap;
 }
 
 blockquote {
@@ -100,4 +100,5 @@ p {
   white-space: pre;
   color: #236b5e;
   font-size: 16.75px;
+  max-width: 800px;
 }
