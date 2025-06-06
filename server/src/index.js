@@ -16,7 +16,6 @@ app.use((_, res, next) => {
     "Access-Control-Allow-Origin",
     "http://localhost:3000",
     "https://recipe-app-copy.onrender.com",
-    "https://food852.up.railway.app/"
   );
   res.set("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   res.set(
