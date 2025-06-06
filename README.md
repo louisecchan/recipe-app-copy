@@ -1,4 +1,4 @@
-# 🍽️ Recipe App Copy
+# 🍽️ Recipe App
 
 A full-stack web application for discovering, managing, and sharing recipes. This project is a clone or adaptation of an existing recipe app, showcasing both frontend and backend capabilities.
 
