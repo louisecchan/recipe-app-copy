@@ -9,21 +9,11 @@ import { recipesRouter } from "./routes/recipes.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
-
-app.use((_, res, next) => {
-  res.set(
-    "Access-Control-Allow-Origin",
-    "http://localhost:3000",
-    "https://recipe-app-copy.onrender.com",
-  );
-  res.set("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-  res.set(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  return next();
-});
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://recipe-app-copy.onrender.com'],
+  methods: ['PUT', 'POST', 'GET', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+}));
 
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
