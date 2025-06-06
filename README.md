@@ -1,13 +1,13 @@
 # 🍽️ Recipe App
 
-A full-stack web application for discovering, managing, and sharing recipes. This project is a clone or adaptation of an existing recipe app, showcasing both frontend and backend capabilities.
+A full-stack web application for discovering, managing, and sharing recipes. This project is a clone or adaptation of an existing recipe application, showcasing both frontend and backend development.
 
 ---
 
 ## 📁 Project Structure
 
-- `client/` – Frontend built with React and SCSS.
-- `server/` – Backend built with Node.js and Express.
+- **`client/`** – Frontend built with React and styled with SCSS.
+- **`server/`** – Backend using Node.js and Express.js.
 
 ---
 
@@ -22,8 +22,16 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. **Clone the repo:**
+```bash
+# Clone the repository
+git clone https://github.com/louisecchan/recipe-app-copy.git
+cd recipe-app-copy
 
-   ```bash
-   git clone https://github.com/louisecchan/recipe-app-copy.git
-   cd recipe-app-copy
+# Install frontend dependencies
+cd client
+npm install
+
+# Install backend dependencies
+cd ../server
+npm install
+```
