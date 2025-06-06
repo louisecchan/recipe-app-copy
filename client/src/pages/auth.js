@@ -30,7 +30,7 @@ const Login = () => {
 
     try {
       const result = await axios.post(
-        "https://abandoned-ship-production.up.railway.app/auth/login",
+        "https://server-recipe-app-copy.onrender.com/auth/login",
         {
           username,
           password,
@@ -88,7 +88,7 @@ const Register = () => {
     event.preventDefault();
     try {
       await axios.post(
-        "https://abandoned-ship-production.up.railway.app/auth/register",
+        "https://server-recipe-app-copy.onrender.com/auth/register",
         {
           username,
           password,

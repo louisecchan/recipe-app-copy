@@ -43,10 +43,12 @@ if (process.env.NODE_ENV === "production") {
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
+    console.log("✅ MongoDB Connected Successfully!");
     app.listen(process.env.PORT || 3001, () =>
-      console.log("SERVER STARTED <3")
+      console.log(`🚀 Server is running on port ${process.env.PORT || 3001}`)
     );
   })
   .catch((error) => {
-    console.log(error);
+    console.error("❌ MongoDB Connection Error:", error.message);
+    process.exit(1); // Exit the process with failure
   });

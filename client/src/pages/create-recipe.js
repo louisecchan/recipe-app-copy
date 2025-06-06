@@ -46,7 +46,7 @@ export const CreateRecipe = () => {
 
     try {
       await axios.post(
-        "https://abandoned-ship-production.up.railway.app/recipes",
+        "https://server-recipe-app-copy.onrender.com/recipes",
         { ...recipe },
         {
           headers: { authorization: cookies.access_token },

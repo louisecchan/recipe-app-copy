@@ -15,7 +15,7 @@ export const Home = () => {
     const fetchRecipes = async () => {
       try {
         const response = await axios.get(
-          "https://abandoned-ship-production.up.railway.app/recipes"
+          "https://server-recipe-app-copy.onrender.com/recipes"
         );
         setRecipes(response.data);
       } catch (err) {
@@ -26,7 +26,7 @@ export const Home = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://abandoned-ship-production.up.railway.app/recipes/savedRecipes/ids/${userID}`
+          `https://server-recipe-app-copy.onrender.com/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -42,7 +42,7 @@ export const Home = () => {
   const saveRecipe = async (recipeID) => {
     try {
       const response = await axios.put(
-        "https://abandoned-ship-production.up.railway.app/recipes",
+        "https://server-recipe-app-copy.onrender.com/recipes",
         {
           recipeID,
           userID,
