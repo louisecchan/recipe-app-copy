@@ -1,6 +1,6 @@
 # 🍽️ Recipe App
 
-A full-stack web application for discovering, managing, and sharing recipes. 
+A full-stack web application for discovering, managing, and sharing recipes. 🤩 
 
 ---
 
