@@ -4,14 +4,14 @@ A full-stack web application for discovering, managing, and sharing recipes.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 - **`client/`** – Frontend built with React and styled with SCSS.
 - **`server/`** – Backend using Node.js and Express.js.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
