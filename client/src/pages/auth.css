@@ -58,6 +58,7 @@
 #username:focus,
 #password:focus {
   color: #fdbda2;
+  outline: none;
 }
 
 #submit {
