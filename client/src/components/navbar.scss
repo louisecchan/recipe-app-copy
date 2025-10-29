@@ -104,6 +104,39 @@ a {
 
   li {
     padding-top: 2.7rem;
+    outline: none !important;
+
+    &:focus {
+      outline: none !important;
+    }
+
+    &:active {
+      outline: none !important;
+    }
+
+    a {
+      outline: none !important;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:active {
+        outline: none !important;
+      }
+    }
+
+    button {
+      outline: none !important;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:active {
+        outline: none !important;
+      }
+    }
   }
 
   &:hover {
