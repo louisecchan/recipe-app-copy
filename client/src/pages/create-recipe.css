@@ -22,7 +22,8 @@
 #cookingTime {
   border: 1px solid #bb874f;
   opacity: 0.8;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
 
@@ -169,7 +170,10 @@ textarea:focus {
   right: 0;
   top: 0%;
   z-index: -1;
-  -webkit-transition: bottom 0.09s ease-in;
+  transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fill:hover:before {
@@ -198,7 +202,7 @@ textarea:focus {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards; /*IE 10+*/
   opacity: 0;
-  opacity: 1\9 ;
+  opacity: 1\9;
 }
 
 .slide-up-fade-in-delayed {
@@ -223,7 +227,7 @@ textarea:focus {
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards; /*IE 10+*/
   opacity: 0;
-  opacity: 1\9 ;
+  opacity: 1\9;
   animation-delay: 300ms;
 }
 
@@ -279,17 +283,19 @@ textarea:focus {
 }
 @keyframes popAndJiggle {
   0% {
-    transform: scale(0.9);
+    transform: scale(0.95);
+    opacity: 0;
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 .pop-jiggle {
-  animation: popAndJiggle 0.5s ease;
+  animation: popAndJiggle 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /*# sourceMappingURL=create-recipe.css.map */
