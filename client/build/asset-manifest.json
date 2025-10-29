@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e328b7b6.css",
-    "main.js": "/static/js/main.f6f6acb5.js",
+    "main.css": "/static/css/main.123d7df7.css",
+    "main.js": "/static/js/main.5364a82b.js",
+    "static/media/RightGrotesk-Medium.otf": "/static/media/RightGrotesk-Medium.8623e3fbb1e0b6d0b84f.otf",
+    "static/media/ObjectSans-Regular.otf": "/static/media/ObjectSans-Regular.8e3ca8a29d32866844a1.otf",
+    "static/media/SaaSeries-FA.woff": "/static/media/SaaSeries-FA.f2055a2d193e478008c0.woff",
+    "static/media/NantesWeb-Regular.otf": "/static/media/NantesWeb-Regular.d0e631291393aabbfe72.otf",
     "index.html": "/index.html",
-    "main.e328b7b6.css.map": "/static/css/main.e328b7b6.css.map",
-    "main.f6f6acb5.js.map": "/static/js/main.f6f6acb5.js.map"
+    "main.123d7df7.css.map": "/static/css/main.123d7df7.css.map",
+    "main.5364a82b.js.map": "/static/js/main.5364a82b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e328b7b6.css",
-    "static/js/main.f6f6acb5.js"
+    "static/css/main.123d7df7.css",
+    "static/js/main.5364a82b.js"
   ]
 }
