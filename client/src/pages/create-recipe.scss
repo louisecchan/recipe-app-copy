@@ -1,3 +1,17 @@
+@media screen and (max-width: 480px) {
+  .create-recipe {
+    width: calc(100vw - 40px);
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @media screen and (max-width: 420px) {
   label {
     font-size: 1.15rem !important;
@@ -17,9 +31,9 @@
 }
 
 //.nav__link--text {
-  //grid-area: 1/1;
-  //transition: opacity 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-  //  transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//grid-area: 1/1;
+//transition: opacity 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+//  transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 //}
 
 //.nav__link--text .word {
@@ -179,12 +193,24 @@ textarea:focus {
 }
 
 @keyframes vibrate {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 .cr1-button,
