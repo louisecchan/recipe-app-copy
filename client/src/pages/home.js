@@ -15,11 +15,9 @@ export const Home = () => {
     const fetchRecipes = async () => {
       try {
         const response = await axios.get(
-          "https://server-recipe-app-copy.onrender.com/recipes?limit=100"
+          "https://server-recipe-app-copy.onrender.com/recipes"
         );
-        // Handle both old and new response formats
-        const recipesData = response.data.recipes || response.data;
-        setRecipes(recipesData);
+        setRecipes(response.data);
       } catch (err) {
         console.log(err);
       }

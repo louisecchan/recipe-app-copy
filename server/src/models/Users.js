@@ -7,7 +7,4 @@ const UserSchema = new mongoose.Schema({
   savedRecipes: [{ type: mongoose.Schema.Types.ObjectId, ref: "Recipe" }],
 });
 
-// Add index for faster lookups of saved recipes
-UserSchema.index({ savedRecipes: 1 });
-
 export const UserModel = mongoose.model("users", UserSchema); // Setting the schema to a collection, i.e. "users" here

@@ -30,14 +30,6 @@ const recipeSchema = mongoose.Schema({
     ref: "User",
     required: true,
   },
-}, {
-  timestamps: true, // Adds createdAt and updatedAt fields
 });
-
-// Add indexes for faster queries
-recipeSchema.index({ userOwner: 1 }); // Index for filtering by user
-recipeSchema.index({ name: 1 }); // Index for searching by name
-recipeSchema.index({ cookingTime: 1 }); // Index for filtering by cooking time
-recipeSchema.index({ createdAt: -1 }); // Index for sorting by creation date
 
 export const RecipesModel = mongoose.model("Recipes", recipeSchema);
