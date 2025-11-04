@@ -1,3 +1,22 @@
+@media screen and (max-width: 480px) {
+  .auth {
+    overflow-x: hidden;
+  }
+
+  .auth-container-1,
+  .auth-container-2 {
+    width: calc(100vw - 40px);
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .auth-container-1 {
     margin-bottom: 2rem !important;
