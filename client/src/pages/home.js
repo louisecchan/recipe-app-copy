@@ -9,8 +9,10 @@ export const Home = () => {
   const [recipes, setRecipes] = useState([]); // keep track of all the recipes existing in database
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [activeRecipe, setActiveRecipe] = useState(0);
   const [cookies, _] = useCookies(["access_token"]);
   const userID = useGetUserID();
+  const recipeRefs = useRef([]);
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -62,6 +64,43 @@ export const Home = () => {
 
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
+  const scrollToRecipe = (index) => {
+    const element = recipeRefs.current[index];
+    if (element) {
+      const navbarHeight = 80; // Adjust this to match your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - navbarHeight - 20;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setActiveRecipe(index);
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      recipeRefs.current.forEach((ref, index) => {
+        if (ref) {
+          const { offsetTop, offsetHeight } = ref;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveRecipe(index);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [recipes]);
+
   return (
     <div className="recipe-container">
       {loading ? (
@@ -70,14 +109,31 @@ export const Home = () => {
         </div>
       ) : (
         <>
-          {recipes.length > 0 && <h1 className="recipe-cat-heading">Recipes</h1>}
+          {recipes.length > 0 && (
+            <>
+              <h1 className="recipe-cat-heading">Recipes</h1>
+              <div className="recipe-sidebar">
+                {recipes.map((recipe, index) => (
+                  <div
+                    key={recipe._id}
+                    className={`sidebar-dot ${
+                      activeRecipe === index ? "active" : ""
+                    }`}
+                    onClick={() => scrollToRecipe(index)}
+                    title={recipe.name}
+                  />
+                ))}
+              </div>
+            </>
+          )}
           <ul>
-            {recipes.map((recipe) => (
+            {recipes.map((recipe, index) => (
               <motion.li
                 initial={{ opacity: 0.3 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 key={recipe._id}
+                ref={(el) => (recipeRefs.current[index] = el)}
               >
                 <div>
                   <h2 className="recipe-title">{recipe.name}</h2>
