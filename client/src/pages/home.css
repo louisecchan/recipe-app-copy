@@ -90,6 +90,12 @@
   -o-transition: 0.5s ease-in-out;
 }
 
+.saveButton:focus,
+.saveButton:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .cookingTime {
   color: #bb874f;
   padding-top: 0.2rem;
