@@ -39,7 +39,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    maxPoolSize: 10, // Maximum number of connections in the pool
+    minPoolSize: 2, // Minimum number of connections in the pool
+    serverSelectionTimeoutMS: 5000, // Timeout for selecting a server
+    socketTimeoutMS: 45000, // Timeout for socket operations
+    family: 4 // Use IPv4, skip trying IPv6
+  })
   .then(() => {
     console.log("✅ MongoDB Connected Successfully!");
     app.listen(process.env.PORT || 3001, () =>
