@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 export const Home = () => {
   const [recipes, setRecipes] = useState([]); // keep track of all the recipes existing in database
   const [savedRecipes, setSavedRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [cookies, _] = useCookies(["access_token"]);
   const userID = useGetUserID();
 
@@ -20,6 +21,8 @@ export const Home = () => {
         setRecipes(response.data);
       } catch (err) {
         console.log(err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -61,44 +64,52 @@ export const Home = () => {
 
   return (
     <div className="recipe-container">
-      <h1 className="recipe-cat-heading">Recipes</h1>
-      <ul>
-        {recipes.map((recipe) => (
-          <motion.li
-            initial={{ opacity: 0.3 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            key={recipe._id}
-          >
-            <div>
-              <h2 className="recipe-title">{recipe.name}</h2>
-            </div>
-            <img src={recipe.imageUrl} alt={recipe.name} />
+      {loading ? (
+        <div className="loading-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        <>
+          {recipes.length > 0 && <h1 className="recipe-cat-heading">Recipes</h1>}
+          <ul>
+            {recipes.map((recipe) => (
+              <motion.li
+                initial={{ opacity: 0.3 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                key={recipe._id}
+              >
+                <div>
+                  <h2 className="recipe-title">{recipe.name}</h2>
+                </div>
+                <img src={recipe.imageUrl} alt={recipe.name} />
 
-            <div className="instructions">
-              <p className="cookingTime">
-                Cooking Time: {recipe.cookingTime} minutes
-              </p>
-              <h3>Ingredients</h3>
+                <div className="instructions">
+                  <p className="cookingTime">
+                    Cooking Time: {recipe.cookingTime} minutes
+                  </p>
+                  <h3>Ingredients</h3>
 
-              <p className="recipe-ingredients">{recipe.ingredients}</p>
-              <h3>Method</h3>
+                  <p className="recipe-ingredients">{recipe.ingredients}</p>
+                  <h3>Method</h3>
 
-              <p className="recipe-instructions" id="method">
-                {recipe.instructions}
-              </p>
-            </div>
+                  <p className="recipe-instructions" id="method">
+                    {recipe.instructions}
+                  </p>
+                </div>
 
-            <button
-              onClick={() => saveRecipe(recipe._id)}
-              disabled={isRecipeSaved(recipe._id)}
-              className="saveButton"
-            >
-              {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
-            </button>
-          </motion.li>
-        ))}
-      </ul>
+                <button
+                  onClick={() => saveRecipe(recipe._id)}
+                  disabled={isRecipeSaved(recipe._id)}
+                  className="saveButton"
+                >
+                  {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
+                </button>
+              </motion.li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   );
 };
