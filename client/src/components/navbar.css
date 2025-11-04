@@ -72,6 +72,25 @@ a {
   display: none;
 }
 
+.hamburger,
+.hamburger *,
+.hamburger button,
+.hamburger div {
+  outline: none !important;
+  border: none !important;
+}
+
+.hamburger:hover,
+.hamburger:focus,
+.hamburger button:hover,
+.hamburger button:focus,
+.hamburger div:hover,
+.hamburger div:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .nav-btn {
   display: none;
 }

@@ -80,6 +80,35 @@ a {
 
 .hamburger {
   display: none;
+
+  * {
+    outline: none !important;
+    border: none !important;
+  }
+
+  button {
+    outline: none !important;
+    border: none !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  div {
+    outline: none !important;
+    border: none !important;
+
+    &:hover,
+    &:focus {
+      outline: none !important;
+      border: none !important;
+    }
+  }
 }
 
 .nav-btn {
