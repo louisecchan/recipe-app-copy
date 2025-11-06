@@ -28,7 +28,7 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0 <20.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +50,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "overrides": {
+    "ajv-keywords": "^5.1.0",
+    "schema-utils": "^4.0.0"
   }
 }
