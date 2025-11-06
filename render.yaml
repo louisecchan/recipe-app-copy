@@ -17,7 +17,7 @@ services:
     name: recipe-app-client
     env: static
     region: oregon
-    buildCommand: cd client && npm install --legacy-peer-deps && npm run build
+    buildCommand: cd client && rm -rf node_modules package-lock.json && npm install --legacy-peer-deps && npm run build
     staticPublishPath: ./client/build
     envVars:
       - key: NODE_VERSION
